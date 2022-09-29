@@ -27,34 +27,7 @@ class ListFragment : Fragment() {
         binding = FragmentListBinding.inflate(layoutInflater, container, false)
 
 
-        val listTarefas = listOf(
-            Tarefa(
-                "Lavar a louça",
-                "Lavar a louça do dia todo",
-                "Wesley",
-                "2022-09-26",
-                false,
-                "Dia a Dia"
-            ),
 
-            Tarefa(
-                "Estudar inglês",
-                "Consumir conteúdos em inglês",
-                "Wesley",
-                "2022-09-26",
-                false,
-                "Estudos"
-            ),
-
-            Tarefa(
-                "Médico",
-                "Consulta com clínico",
-                "Wesley",
-                "2022-09-26",
-                false,
-                "Saúde"
-            )
-        )
 
         val adapter = TarefaAdapter()
 
@@ -62,7 +35,7 @@ class ListFragment : Fragment() {
         binding.recyclerTarefa.adapter = adapter
         binding.recyclerTarefa.setHasFixedSize(true)
 
-        adapter.setList(listTarefas)
+
 
         binding.floatingAdd.setOnClickListener {
             findNavController().navigate(R.id.action_listFragment_to_formFragment)
@@ -73,3 +46,33 @@ class ListFragment : Fragment() {
 }
 
 
+// adapter.setList(listTarefas)
+
+/* val listTarefas = listOf(
+      Tarefa(
+          "Lavar a louça",
+          "Lavar a louça do dia todo",
+          "Wesley",
+          "2022-09-26",
+          false,
+          "Dia a Dia"
+      ),
+
+      Tarefa(
+          "Estudar inglês",
+          "Consumir conteúdos em inglês",
+          "Wesley",
+          "2022-09-26",
+          false,
+          "Estudos"
+      ),
+
+      Tarefa(
+          "Médico",
+          "Consulta com clínico",
+          "Wesley",
+          "2022-09-26",
+          false,
+          "Saúde"
+      )
+  )*/
